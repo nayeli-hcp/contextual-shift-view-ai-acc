@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import MainTable from './components/MainTable/MainTable';
 import ShiftDetailModal from './components/ShiftDetailModal/ShiftDetailModal';
+import Sidebar from './components/Sidebar/Sidebar';
+import TopBar from './components/TopBar/TopBar';
 import { EMPLOYEES, WEEK_CELLS, WEEK_DAYS, SHIFT_DATA, INITIAL_BLOCKS, ROW_TOTALS, COL_TOTALS, GRAND_TOTAL } from './data/mockShifts';
 import styles from './App.module.css';
 
@@ -53,29 +55,33 @@ function App() {
 
   return (
     <div className={styles.appRoot}>
-      <MainTable
-        employees={EMPLOYEES}
-        weekDays={WEEK_DAYS}
-        weekCells={WEEK_CELLS}
-        blocks={blocks}
-        rowTotals={ROW_TOTALS}
-        colTotals={COL_TOTALS}
-        grandTotal={GRAND_TOTAL}
-        onOpenModal={handleOpenModal}
-      />
-      {openShift && (
-        <ShiftDetailModal
-          shift={openShift}
-          shiftKey={openShiftKey}
-          blocks={currentBlocks}
-          isPaid={isPaid}
-          onAddBlock={handleAddBlock}
-          onEditBlock={handleEditBlock}
-          onDeleteBlock={handleDeleteBlock}
-          onTogglePaid={handleTogglePaid}
-          onClose={handleCloseModal}
+      <Sidebar />
+      <div className={styles.mainArea}>
+        <TopBar />
+        <MainTable
+          employees={EMPLOYEES}
+          weekDays={WEEK_DAYS}
+          weekCells={WEEK_CELLS}
+          blocks={blocks}
+          rowTotals={ROW_TOTALS}
+          colTotals={COL_TOTALS}
+          grandTotal={GRAND_TOTAL}
+          onOpenModal={handleOpenModal}
         />
-      )}
+        {openShift && (
+          <ShiftDetailModal
+            shift={openShift}
+            shiftKey={openShiftKey}
+            blocks={currentBlocks}
+            isPaid={isPaid}
+            onAddBlock={handleAddBlock}
+            onEditBlock={handleEditBlock}
+            onDeleteBlock={handleDeleteBlock}
+            onTogglePaid={handleTogglePaid}
+            onClose={handleCloseModal}
+          />
+        )}
+      </div>
     </div>
   );
 }

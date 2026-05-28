@@ -84,8 +84,8 @@
   background: var(--primary-main);
   color: var(--text-reverse);
   border: none;
-  border-radius: 6px;
-  padding: 6px 12px;
+  border-radius: 20px;
+  padding: 6px 14px;
   font-size: 12px;
   font-weight: 600;
   font-family: var(--font-family);
@@ -96,14 +96,14 @@
 
 .btnCancel {
   font-size: 12px;
-  color: var(--text-secondary);
+  color: var(--primary-main);
   cursor: pointer;
   background: none;
   border: none;
   font-family: var(--font-family);
   padding: 6px 0;
 }
-.btnCancel:hover { color: var(--text-primary); }
+.btnCancel:hover { opacity: 0.8; }
 
 .removeLink {
   display: block;

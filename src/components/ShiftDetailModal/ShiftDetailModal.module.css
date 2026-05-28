@@ -192,7 +192,7 @@
 
 .btnPrimary {
   padding: 8px 20px;
-  border-radius: 8px;
+  border-radius: 20px;
   font-size: var(--web-button-size);
   font-weight: 600;
   font-family: var(--font-family);
@@ -206,14 +206,14 @@
 
 .btnGhost {
   padding: 8px 20px;
-  border-radius: 8px;
+  border-radius: 20px;
   font-size: var(--web-button-size);
   font-weight: 600;
   font-family: var(--font-family);
   cursor: pointer;
   background: transparent;
-  color: var(--text-primary);
-  border: 1px solid var(--border-light);
+  color: var(--primary-main);
+  border: 1px solid var(--primary-main);
   transition: background 0.15s;
 }
-.btnGhost:hover { background: var(--background-page); }
+.btnGhost:hover { background: rgba(0, 87, 255, 0.06); }

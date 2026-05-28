@@ -1,0 +1,70 @@
+.topBar {
+  display: flex;
+  align-items: center;
+  gap: var(--space-16);
+  height: 56px;
+  padding: 0 var(--space-16);
+  background: var(--background-paper);
+  border-bottom: 1px solid var(--border-light);
+  flex-shrink: 0;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+/* ── Search ─────────────────────────────────────── */
+.searchWrap {
+  flex: 1;
+  max-width: 480px;
+  display: flex;
+  align-items: center;
+  gap: var(--space-08);
+  height: 36px;
+  padding: 0 var(--space-12);
+  background: #f0f2f7;
+  border-radius: 20px;
+}
+
+.searchIcon {
+  color: var(--text-secondary);
+  font-size: 20px;
+  flex-shrink: 0;
+}
+
+.searchPlaceholder {
+  font-family: var(--font-family);
+  font-size: var(--web-body2-size);
+  color: var(--text-secondary);
+  user-select: none;
+}
+
+/* ── Action icons ───────────────────────────────── */
+.actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-04);
+  margin-left: auto;
+}
+
+.iconBtn {
+  width: 36px;
+  height: 36px;
+  border: none;
+  background: none;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-secondary);
+  transition: background 0.1s, color 0.1s;
+}
+
+.iconBtn:hover {
+  background: #f0f2f7;
+  color: var(--text-primary);
+}
+
+.iconBtn .material-symbols-rounded {
+  font-size: 22px;
+}

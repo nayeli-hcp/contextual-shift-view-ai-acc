@@ -1,0 +1,289 @@
+.sidebar {
+  width: 264px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  border-right: 1px solid #8c96aa;
+  isolation: isolate;
+  transition: width 0.2s ease;
+  overflow: hidden;
+}
+
+/* ── Header ─────────────────────────────────────────── */
+.header {
+  background: #ffffff;
+  padding: 24px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  position: sticky;
+  top: 0;
+  z-index: 3;
+}
+
+.logoRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 24px;
+}
+
+.logo {
+  height: 24px;
+  width: auto;
+  max-width: 169px;
+  display: block;
+  flex-shrink: 0;
+}
+
+.logoMark {
+  display: none;
+  color: var(--text-primary);
+  flex-shrink: 0;
+}
+
+.collapseBtn {
+  width: 24px;
+  height: 24px;
+  border: none;
+  background: none;
+  padding: 0;
+  cursor: pointer;
+  color: #6b7487;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.createBtn {
+  width: 100%;
+  background: #0E6FBE;
+  color: #ffffff;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 16px;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: 'Open Sans', sans-serif;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  line-height: 1;
+  transition: background 0.15s;
+}
+.createBtn:hover { background: #0046cc; }
+
+/* ── Scrollable nav section ──────────────────────────── */
+.navScroll {
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+  background: #ffffff;
+  padding: 24px;
+  position: relative;
+  z-index: 2;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+/* ── Nav items ───────────────────────────────────────── */
+.navItem {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 4px;
+  border-radius: 8px;
+  min-width: 0;
+  width: 100%;
+  text-decoration: none;
+  flex-shrink: 0;
+  transition: background 0.1s;
+}
+.navItem:hover { background: rgba(178, 205, 255, 0.1); }
+
+.navItemActive { background: rgba(178, 205, 255, 0.2); }
+.navItemActive .navLabel { color: #464e5a; }
+.navItemActive .navIcon  { color: #464e5a; }
+
+.navLabel {
+  flex: 1;
+  min-width: 0;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.74;
+  color: #6b7487;
+  white-space: nowrap;
+  transition: opacity 0.15s;
+}
+
+.navIcon {
+  width: 24px;
+  height: 24px;
+  overflow: hidden;
+  flex-shrink: 0;
+  color: #6b7487;
+}
+
+.chevron {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  color: #6b7487;
+  transition: opacity 0.15s;
+}
+
+/* ── Divider ─────────────────────────────────────────── */
+.divider {
+  height: 1px;
+  background: #e1e6f2;
+  flex-shrink: 0;
+  margin: 4px 0;
+}
+
+/* ── Bottom section ──────────────────────────────────── */
+.bottomSection {
+  background: #f2f6fd;
+  padding: 16px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex-shrink: 0;
+  z-index: 1;
+}
+
+.accountRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 8px 8px 0;
+  min-width: 0;
+  cursor: pointer;
+}
+
+.accountAvatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #0E6FBE;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: 'Open Sans', sans-serif;
+  flex-shrink: 0;
+}
+
+.accountInfo {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  height: 40px;
+  justify-content: center;
+  color: #6b7487;
+  transition: opacity 0.15s;
+}
+
+.accountName {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: 'Open Sans', sans-serif;
+  line-height: 1.74;
+}
+
+.accountRole {
+  display: block;
+  font-size: 12px;
+  font-weight: 400;
+  font-family: 'Open Sans', sans-serif;
+  line-height: 1.33;
+}
+
+.accountChevron {
+  width: 24px;
+  height: 24px;
+  color: #6b7487;
+  flex-shrink: 0;
+  transition: opacity 0.15s;
+}
+
+/* ══════════════════════════════════════════════════════
+   Collapsed state
+   ══════════════════════════════════════════════════════ */
+.collapsed {
+  width: 64px;
+}
+
+.collapsed .header {
+  padding: 16px 8px;
+  gap: 16px;
+}
+
+.collapsed .logo {
+  display: none;
+}
+
+.collapsed .logoMark {
+  display: block;
+}
+
+.collapsed .createBtn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  padding: 0;
+  align-self: center;
+}
+
+.collapsed .createLabel {
+  display: none;
+}
+
+.collapsed .navScroll {
+  padding: 16px 8px;
+}
+
+.collapsed .navItem {
+  justify-content: center;
+  padding: 8px;
+  gap: 0;
+}
+
+.collapsed .navLabel {
+  display: none;
+}
+
+.collapsed .chevron {
+  display: none;
+}
+
+.collapsed .bottomSection {
+  padding: 16px 8px;
+  align-items: center;
+}
+
+.collapsed .accountRow {
+  padding: 8px 0;
+  justify-content: center;
+}
+
+.collapsed .accountInfo {
+  display: none;
+}
+
+.collapsed .accountChevron {
+  display: none;
+}

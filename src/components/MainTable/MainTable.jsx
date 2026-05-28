@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { parseTime, formatDuration } from '../../utils/time';
 import { SHIFT_DATA } from '../../data/mockShifts';
+//import Sidebar from '../Sidebar/Sidebar';
 import styles from './MainTable.module.css';
 
 function computeLoggedBlocksStat(blocks) {
@@ -31,43 +32,7 @@ export default function MainTable({
 
   return (
     <div className={styles.shell}>
-      {/* Sidebar */}
-      <aside className={styles.sidebar}>
-        <div className={styles.sidebarLogo}>
-          <div className={styles.logoIcon}>
-            <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
-              <rect x="1" y="1" width="5" height="5" rx="1.5" fill="white"/>
-              <rect x="8" y="1" width="5" height="5" rx="1.5" fill="white" opacity="0.7"/>
-              <rect x="1" y="8" width="5" height="5" rx="1.5" fill="white" opacity="0.7"/>
-              <rect x="8" y="8" width="5" height="5" rx="1.5" fill="white" opacity="0.5"/>
-            </svg>
-          </div>
-          <span className={styles.logoText}>Housecall Pro</span>
-        </div>
-        <div className={styles.sidebarSearch}>
-          <input className={styles.searchInput} type="text" placeholder="Search records" readOnly />
-        </div>
-        <nav className={styles.navSection}>
-          {['Home','Schedule','Pipeline','Customers','Leads','Estimates','Jobs','Invoices','Money','Reporting'].map(item => (
-            <a key={item} className={styles.navItem} href="#">{item}</a>
-          ))}
-        </nav>
-        <div className={styles.navLabel}>Team</div>
-        <nav className={styles.navSection}>
-          <a className={styles.navItem} href="#">Team Members</a>
-          <a className={`${styles.navItem} ${styles.navItemSub} ${styles.navItemActive}`} href="#">Time &amp; Attendance</a>
-          <a className={`${styles.navItem} ${styles.navItemSub}`} href="#">Payroll</a>
-        </nav>
-        <div className={styles.sidebarFooter}>
-          <div className={styles.userRow}>
-            <div className={styles.avatar} style={{ background: '#0057ff' }}>NP</div>
-            <div className={styles.userInfo}>
-              <div className={styles.userName}>Nayeli Perez</div>
-              <div className={styles.userRole}>Admin</div>
-            </div>
-          </div>
-        </div>
-      </aside>
+      {/* <Sidebar /> */}
 
       {/* Main content */}
       <div className={styles.mainArea}>
