@@ -1,0 +1,120 @@
+.popover {
+  position: absolute;
+  left: 4px;
+  right: 4px;
+  background: var(--background-paper);
+  border: 1px solid var(--primary-main);
+  border-radius: 8px;
+  padding: 10px 12px;
+  box-shadow: 0 4px 20px rgba(0, 87, 255, 0.14);
+  z-index: 20;
+  pointer-events: all;
+}
+
+.title {
+  font-size: var(--web-caption2-size);
+  font-weight: 600;
+  color: var(--text-secondary);
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.timeRow {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 8px;
+}
+
+.timeInput {
+  border: 1px solid var(--border-light);
+  border-radius: 6px;
+  padding: 5px 8px;
+  font-size: 12px;
+  font-family: var(--font-family);
+  color: var(--text-primary);
+  outline: none;
+  flex: 1;
+  min-width: 0;
+}
+.timeInput:focus { border-color: var(--primary-main); }
+
+.toLabel {
+  font-size: 12px;
+  color: var(--text-secondary);
+  flex-shrink: 0;
+}
+
+.categoryRow { margin-bottom: 8px; }
+
+.categorySelect {
+  width: 100%;
+  border: 1px solid var(--border-light);
+  border-radius: 6px;
+  padding: 5px 24px 5px 8px;
+  font-size: 12px;
+  font-family: var(--font-family);
+  color: var(--text-primary);
+  background: var(--background-paper);
+  outline: none;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg width='8' height='5' viewBox='0 0 8 5' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1l3 3 3-3' stroke='%236b7487' stroke-width='1.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 8px center;
+  cursor: pointer;
+}
+.categorySelect:focus { border-color: var(--primary-main); }
+
+.error {
+  font-size: 11px;
+  color: var(--error-main);
+  margin-bottom: 8px;
+  line-height: 1.4;
+}
+
+.btnRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 2px;
+}
+
+.btnSave {
+  background: var(--primary-main);
+  color: var(--text-reverse);
+  border: none;
+  border-radius: 6px;
+  padding: 6px 12px;
+  font-size: 12px;
+  font-weight: 600;
+  font-family: var(--font-family);
+  cursor: pointer;
+  transition: background 0.15s;
+}
+.btnSave:hover { background: var(--primary-dark); }
+
+.btnCancel {
+  font-size: 12px;
+  color: var(--text-secondary);
+  cursor: pointer;
+  background: none;
+  border: none;
+  font-family: var(--font-family);
+  padding: 6px 0;
+}
+.btnCancel:hover { color: var(--text-primary); }
+
+.removeLink {
+  display: block;
+  margin-top: 6px;
+  font-size: 11px;
+  color: var(--error-main);
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: var(--font-family);
+  padding: 0;
+  text-decoration: underline;
+}
+.removeLink:hover { opacity: 0.8; }

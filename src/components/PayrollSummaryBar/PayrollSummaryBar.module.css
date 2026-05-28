@@ -1,0 +1,17 @@
+.bar {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(0, 87, 255, 0.05);
+  border: 1px solid rgba(0, 87, 255, 0.2);
+  border-radius: 8px;
+  padding: 10px 16px;
+  font-size: var(--web-body2-size);
+  color: var(--text-primary);
+  flex-shrink: 0;
+  flex-wrap: wrap;
+}
+
+.shiftVal { font-weight: 600; color: var(--text-primary); }
+.blockVal { font-weight: 600; color: var(--primary-main); }
+.sep      { color: var(--text-secondary); }

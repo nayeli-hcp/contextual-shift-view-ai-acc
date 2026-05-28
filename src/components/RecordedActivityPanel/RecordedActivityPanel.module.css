@@ -1,0 +1,122 @@
+.panel {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+}
+
+.header {
+  padding: 0 0 var(--space-12);
+  flex-shrink: 0;
+}
+
+.title {
+  font-size: var(--web-subtitle1-size);
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 2px;
+}
+
+.subtitle {
+  font-size: var(--web-caption-size);
+  color: var(--text-secondary);
+}
+
+/* Scrollable timeline body */
+.timeline {
+  flex: 1;
+  overflow-y: auto;
+  position: relative;
+  padding-left: 20px;
+  padding-right: 4px;
+  padding-bottom: 8px;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 6px;
+  top: 8px;
+  bottom: 8px;
+  width: 2px;
+  background: var(--border-light);
+  pointer-events: none;
+}
+
+.vtItem {
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.vtDot {
+  position: absolute;
+  left: -17px;
+  top: 5px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.vtDotClock {
+  border: 2px solid var(--text-secondary);
+  background: var(--background-paper);
+}
+
+.vtDotJob {
+  background: var(--success-main);
+  border: 2px solid var(--success-main);
+}
+
+.vtDotGap {
+  background: var(--border-light);
+  border: 2px solid var(--border-light);
+}
+
+.vtClockLabel {
+  font-size: var(--web-caption2-size);
+  font-weight: 600;
+  color: var(--text-secondary);
+  padding-top: 2px;
+}
+
+.vtGap {
+  font-size: var(--web-caption-size);
+  color: var(--text-secondary);
+  font-style: italic;
+  padding: 2px 0 2px 2px;
+}
+
+.vtCard {
+  background: rgba(0, 163, 68, 0.08);
+  border: 1px solid rgba(0, 163, 68, 0.2);
+  border-left: 3px solid var(--success-main);
+  border-radius: 6px;
+  padding: 8px 10px;
+}
+
+.vtCardTitle {
+  font-size: var(--web-subtitle2-size);
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 2px;
+}
+
+.vtCardMeta {
+  font-size: var(--web-caption-size);
+  color: var(--text-secondary);
+}
+
+.footer {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border-top: 1px solid var(--border-light);
+  padding-top: 10px;
+  margin-top: 4px;
+  font-size: var(--web-caption-size);
+  color: var(--text-secondary);
+}
+
+.footerJobTime { color: var(--success-main); }
+.footerSep { color: var(--border-light); }

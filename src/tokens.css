@@ -1,0 +1,92 @@
+:root {
+  /* Primary */
+  --primary-main: #0057ff;
+  --primary-dark: #0046cc;
+
+  /* Backgrounds */
+  --background-page: #fafafa;
+  --background-paper: #ffffff;
+
+  /* Text */
+  --text-primary: #15181d;
+  --text-secondary: #6b7487;
+  --text-reverse: #ffffff;
+
+  /* Borders */
+  --border-light: #e1e6f2;
+
+  /* Status */
+  --success-main: #00a344;
+  --warning-main: #bf8600;
+  --error-main: #d81860;
+
+  /* Category: shop */
+  --category-shop-bg: #e3f2fd;
+  --category-shop-border: #1a73c8;
+  --category-shop-text: #0d47a1;
+
+  /* Category: admin */
+  --category-admin-bg: #f3e5f5;
+  --category-admin-border: #8e24aa;
+  --category-admin-text: #4a148c;
+
+  /* Category: training */
+  --category-training-bg: #e8f5e9;
+  --category-training-border: #2e7d32;
+  --category-training-text: #1b5e20;
+
+  /* Category: travel */
+  --category-travel-bg: #ede7f6;
+  --category-travel-border: #5e35b1;
+  --category-travel-text: #311b92;
+
+  /* Category: meeting */
+  --category-meeting-bg: #fff8e1;
+  --category-meeting-border: #f9a825;
+  --category-meeting-text: #e65100;
+
+  /* Category: breaks */
+  --category-breaks-bg: #fce4ec;
+  --category-breaks-border: #c62828;
+  --category-breaks-text: #b71c1c;
+
+  /* Category: downtime */
+  --category-downtime-bg: #efebe9;
+  --category-downtime-border: #6d4c41;
+  --category-downtime-text: #4e342e;
+
+  /* Category: materials */
+  --category-materials-bg: #fff3e0;
+  --category-materials-border: #e65100;
+  --category-materials-text: #bf360c;
+
+  /* Category: other */
+  --category-other-bg: #f5f5f5;
+  --category-other-border: #757575;
+  --category-other-text: #424242;
+
+  /* Job time shading (read-only) */
+  --job-time-bg: rgba(0, 163, 68, 0.08);
+  --job-time-border: rgba(0, 163, 68, 0.3);
+
+  /* Typography */
+  --font-family: 'Open Sans', sans-serif;
+  --web-h3-size: 22px;
+  --web-subtitle1-size: 16px;
+  --web-subtitle2-size: 14px;
+  --web-body2-size: 14px;
+  --web-caption-size: 12px;
+  --web-caption2-size: 12px;
+  --web-button-size: 14px;
+
+  /* Spacing */
+  --space-04: 4px;
+  --space-08: 8px;
+  --space-12: 12px;
+  --space-16: 16px;
+  --space-32: 32px;
+  --space-40: 40px;
+
+  /* Calendar grid */
+  --slot-height: 28px;
+}

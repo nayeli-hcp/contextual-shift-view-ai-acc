@@ -1,0 +1,106 @@
+.grid {
+  display: flex;
+  border: 1px solid var(--border-light);
+  border-radius: 8px;
+  overflow: hidden;
+  background: var(--background-paper);
+  flex: 1;
+}
+
+/* Time axis */
+.timeAxis {
+  width: 58px;
+  flex-shrink: 0;
+  border-right: 1px solid var(--border-light);
+  background: var(--background-page);
+}
+
+.axisSlot {
+  height: var(--slot-height);
+  display: flex;
+  align-items: flex-start;
+  padding: 2px 6px 0;
+  font-size: 10px;
+  color: var(--text-secondary);
+  border-bottom: 1px solid var(--border-light);
+  white-space: nowrap;
+}
+.axisSlot:last-child { border-bottom: none; }
+.axisSlotHour  { border-bottom-style: solid; }
+.axisSlotHalf  { border-bottom-style: dashed; border-color: #edf0f7; }
+
+/* Block area */
+.blockArea {
+  flex: 1;
+  position: relative;
+  cursor: crosshair;
+  min-width: 0;
+}
+
+.blockAreaLocked { cursor: default; }
+
+/* Slot rows — just for grid lines */
+.slot {
+  height: var(--slot-height);
+  border-bottom: 1px solid var(--border-light);
+  position: relative;
+  pointer-events: none;
+}
+.slot:last-child { border-bottom: none; }
+.slotHour  { border-bottom-style: solid; }
+.slotHalf  { border-bottom-style: dashed; border-color: #edf0f7; }
+
+.blockArea:not(.blockAreaLocked):hover { background: rgba(0, 87, 255, 0.01); }
+
+/* Job shading */
+.jobShading {
+  position: absolute;
+  left: 0;
+  right: 0;
+  background: var(--job-time-bg);
+  border-left: 2px solid var(--job-time-border);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Block overlay container */
+.blocksOverlay {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 2;
+}
+
+/* Block cards */
+.blockCard {
+  position: absolute;
+  left: 4px;
+  right: 4px;
+  border-radius: 5px;
+  padding: 3px 7px;
+  border-left-width: 3px;
+  border-left-style: solid;
+  overflow: hidden;
+  pointer-events: all;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  transition: opacity 0.1s;
+}
+.blockCard:hover { opacity: 0.85; }
+
+.blockIcon  { font-size: 11px; line-height: 1; }
+.blockLabel { font-size: 11px; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.blockTime  { font-size: 10px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+
+/* Category styles */
+.cat_shop      { background: var(--category-shop-bg);      border-color: var(--category-shop-border);      color: var(--category-shop-text); }
+.cat_admin     { background: var(--category-admin-bg);     border-color: var(--category-admin-border);     color: var(--category-admin-text); }
+.cat_training  { background: var(--category-training-bg);  border-color: var(--category-training-border);  color: var(--category-training-text); }
+.cat_travel    { background: var(--category-travel-bg);    border-color: var(--category-travel-border);    color: var(--category-travel-text); }
+.cat_meeting   { background: var(--category-meeting-bg);   border-color: var(--category-meeting-border);   color: var(--category-meeting-text); }
+.cat_breaks    { background: var(--category-breaks-bg);    border-color: var(--category-breaks-border);    color: var(--category-breaks-text); }
+.cat_downtime  { background: var(--category-downtime-bg);  border-color: var(--category-downtime-border);  color: var(--category-downtime-text); }
+.cat_materials { background: var(--category-materials-bg); border-color: var(--category-materials-border); color: var(--category-materials-text); }
+.cat_other     { background: var(--category-other-bg);     border-color: var(--category-other-border);     color: var(--category-other-text); }
